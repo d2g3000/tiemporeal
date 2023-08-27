@@ -12,7 +12,7 @@ const api =express();
 app.use( express.static(path.join(__dirname,"views")))
 const router = Router();
 router.get("/",(req,res)=>{
-    res.sendFile(".src/views/index.html");
+    res.sendFile(__dirname+"/views/index.html");
 });
 io.on("connection",Socket=>{
     Socket.emit("welcome","ahora estas conectado");
