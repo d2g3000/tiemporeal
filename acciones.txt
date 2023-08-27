@@ -1,0 +1,5 @@
+npm init
+
+npm install express socket.io --save
+npm i bufferutil utf-8-validate --save-dev
+npm i nodemon --save-dev

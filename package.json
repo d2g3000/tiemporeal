@@ -1,0 +1,21 @@
+{
+  "name": "socket",
+  "version": "1.0.0",
+  "description": "curso de socket",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon"
+  },
+  "author": "Danny",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2"
+  },
+  "devDependencies": {
+    "bufferutil": "^4.0.7",
+    "nodemon": "^3.0.1",
+    "utf-8-validate": "^5.0.10"
+  }
+}
