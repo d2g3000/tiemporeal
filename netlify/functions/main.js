@@ -1,5 +1,4 @@
-
-const socket = io();
+const socket = io("https://courageous-mooncake-e360f8.netlify.app/");
 const saludar=document.querySelector("#saludar");
 const consulta= document.querySelector("#consulta")
 const resultado=document.querySelector("#resultado")
