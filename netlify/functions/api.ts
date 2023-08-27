@@ -14,7 +14,7 @@ const api = express();
 app.use( express.static(path.join(__dirname,"/src/views")))
 const router = Router();
 router.get('/hello',(req,res)=>{
-    res.sendFile("index.html",{ root : __dirname});
+    res.sendFile(path.resolve("index.html"));
 });
 io.on("connection",Socket=>{
     Socket.emit("welcome","ahora estas conectado");
