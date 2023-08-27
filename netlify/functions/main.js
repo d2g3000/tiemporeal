@@ -1,4 +1,4 @@
-import { io } from "socket.io-client";
+const { io } = require("socket.io-client");
 const socket = io();
 const saludar=document.querySelector("#saludar");
 const consulta= document.querySelector("#consulta")
