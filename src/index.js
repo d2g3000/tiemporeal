@@ -10,7 +10,7 @@ const io = new Server(httpServer);
 app.use( express.static(path.join(__dirname,"views")))
 
 app.get("/",(req,res)=>{
-    return res.json({hello: 'dog'});
+    res.sendFile(__dirname+"/views/index.html");
 });
 io.on("connection",Socket=>{
     Socket.emit("welcome","ahora estas conectado");
@@ -31,4 +31,4 @@ io.on("connection",Socket=>{
     })
 })
 
-httpServer.listen(3005);
+httpServer.listen(80);
