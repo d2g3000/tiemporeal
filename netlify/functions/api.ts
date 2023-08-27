@@ -14,7 +14,7 @@ const api = express();
 
 const router = Router();
 router.get('/hello',(req,res)=>{
-    res.sendFile("/views/index.html");
+    res.sendFile("src/views/index.html");
 });
 io.on("connection",Socket=>{
     Socket.emit("welcome","ahora estas conectado");
