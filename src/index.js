@@ -8,6 +8,7 @@ const app = express();
 const httpServer = createServer(app);
 const io = new Server(httpServer);
 const api =express();
+
 app.use( express.static(path.join(__dirname,"views")))
 const router = Router();
 router.get("/",(req,res)=>{
@@ -32,4 +33,4 @@ io.on("connection",Socket=>{
     })
 })
 api.use('/api/', router);
-httpServer.listen(3005);
+//httpServer.listen(3005);
