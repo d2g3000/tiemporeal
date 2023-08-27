@@ -11,10 +11,10 @@ const httpServer = createServer(app);
 const io = new Server(httpServer);
 
 const api = express();
-app.use( express.static(path.join(__dirname,"views")))
+app.use( express.static(path.join(__dirname,"/src/views")))
 const router = Router();
 router.get('/hello',(req,res)=>{
-    res.sendFile(__dirname+"/views/index.html");
+    res.sendFile(__dirname+"/src/views/index.html");
 });
 io.on("connection",Socket=>{
     Socket.emit("welcome","ahora estas conectado");
