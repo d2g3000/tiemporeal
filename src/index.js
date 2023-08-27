@@ -33,4 +33,4 @@ io.on("connection",Socket=>{
     })
 })
 api.use('/api/', router);
-//httpServer.listen(3005);
+httpServer.listen(3005);
