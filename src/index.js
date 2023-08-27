@@ -1,6 +1,7 @@
 const express = require("express");
 const { createServer } = require("http");
 const { Server } = require("socket.io");
+const {Router}=require('express');
 const path = require("path");
 const { Socket } = require("dgram");
 const app = express();
@@ -8,8 +9,8 @@ const httpServer = createServer(app);
 const io = new Server(httpServer);
 
 app.use( express.static(path.join(__dirname,"views")))
-
-app.get("/",(req,res)=>{
+const router = Router();
+router.get("/",(req,res)=>{
     res.sendFile(__dirname+"/views/index.html");
 });
 io.on("connection",Socket=>{
@@ -31,4 +32,4 @@ io.on("connection",Socket=>{
     })
 })
 
-httpServer.listen(80);
+httpServer.listen(3005);
