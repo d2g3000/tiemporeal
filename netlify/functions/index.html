@@ -17,10 +17,13 @@ el resultado es <span id="resultado"></span>
 </div>
 <div><button id="saludar">Saludar</button></div>
 </div>
-<script type="module">
-    import { io } from "https://cdn.socket.io/4.4.1/socket.io.esm.min.js";
-  
-    const socket = io();
+<script type="importmap">
+    {
+      "imports": {
+        "socket.io-client": "https://cdn.socket.io/4.4.1/socket.io.esm.min.js"
+      }
+    }
+  </script>t = io();
   </script>
     <script src="./main.js">
       
