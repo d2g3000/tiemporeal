@@ -32,5 +32,5 @@ io.on("connection",Socket=>{
         Socket.emit("resultadocliente",data);
     })
 })
-api.use('/api/', router);
+api.use('.netlify/functions/api/', router);
 httpServer.listen(3005);
