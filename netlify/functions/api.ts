@@ -11,7 +11,7 @@ const httpServer = createServer(app);
 const io = new Server(httpServer);
 
 const api = express();
-app.use( express.static(path.join(__dirname,"/src/views")))
+app.use( express.static(path.join(__dirname,"views")))
 const router = Router();
 router.get('/hello',(req,res)=>{
     res.sendFile('index.html', { root: __dirname });
