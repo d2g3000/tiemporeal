@@ -31,6 +31,28 @@ io.on("connection",Socket=>{
     Socket.on("reultadoserver",data=>{
         Socket.emit("resultadocliente",data);
     })
+
+   // Emisión a uno solo
+   socket.on("last", message => {
+
+    const lastSocket = socketsOnline[ socketsOnline.length - 1 ];
+    io.to(lastSocket).emit("salute", message);
+
+})
+
+// on, once, off
+/* socket.emit("on", "holi");
+socket.emit("on", "holi"); */
+
+/* socket.emit("once", "holi");
+socket.emit("once", "holi"); */
+
+socket.emit("off", "holi");
+
+setTimeout(() => {
+    socket.emit("off", "holi");
+}, 3000);
+
 })
 api.use('/api/', router);
 httpServer.listen(3005);

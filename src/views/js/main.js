@@ -60,3 +60,22 @@ consulta.addEventListener("click",()=>{
         resultado.innerHTML=data.overview;
     })
     
+
+    // on, once, off
+socket.on("on", () => {
+    console.log("Se emite varias veces");
+});
+
+socket.once("once", () => {
+    console.log("Se emite una sola vez");
+});
+
+const listener = () => {
+    console.log("Se apaga el evento");
+}
+
+socket.on("off", listener);
+
+setTimeout(() => {
+    socket.off("off", listener);
+}, 2000);
