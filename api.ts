@@ -13,7 +13,7 @@ const io = new Server(httpServer);
 const api = express();
 app.use( express.static(path.join(__dirname,"views")))
 const router = Router();
-router.get('/hello',(req,res)=>{
+router.get('/',(req,res)=>{
     res.json('hola');
 });
 io.on("connection",Socket=>{
