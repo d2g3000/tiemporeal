@@ -35,6 +35,6 @@ io.on("connection",Socket=>{
     })
 })
 
-api.use('/api/', router);
+api.use('/.netlify/functions/', router);
 
 export const handler = serverless(api);
