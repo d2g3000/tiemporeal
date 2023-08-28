@@ -13,9 +13,9 @@ const io = new Server(httpServer);
 const api = express();
 app.use( express.static(path.join(__dirname,"views")))
 const router = Router();
-router.get('/',(req,res)=>{
-    res.json('hola');
-});
+
+router.get('/hello', (req, res) => res.send('Hello World!'));
+
 io.on("connection",Socket=>{
     Socket.emit("welcome","ahora estas conectado");
     io.emit("todos","tu id es"+Socket.id);
@@ -35,6 +35,6 @@ io.on("connection",Socket=>{
     })
 })
 
-api.use('/api', router);
+api.use('/api/', router);
 
 export const handler = serverless(api);
