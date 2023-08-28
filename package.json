@@ -2,7 +2,7 @@
   "name": "socket",
   "version": "1.0.0",
   "description": "curso de socket",
-  "main": "api.ts",
+  "main": "netlify/functions/api.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon",
